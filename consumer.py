@@ -43,7 +43,6 @@ consumer = KafkaConsumer(
     group_id="sales-elt-consumer",
 )
 
-
 def handle_event(event: dict) -> None:
     """Debezium wraps each change in a payload with 'op' (c=create,
     u=update, d=delete, r=initial snapshot read) and 'after' (the new
