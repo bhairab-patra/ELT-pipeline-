@@ -1,0 +1,27 @@
+# --- Python ---
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# --- Project-specific generated files ---
+pipeline.log
+reports/*.csv
+
+# --- Secrets / environment-specific config ---
+# If you move credentials from config.py into a .env file later, keep this:
+.env
+
+# --- Docker ---
+# Named volumes/data dirs if you add persistent volumes to docker-compose.yml
+# (uncomment if you add a bind-mounted data folder for Kafka/Postgres)
+# kafka-data/
+# postgres-data/
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

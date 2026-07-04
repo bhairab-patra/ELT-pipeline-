@@ -1,0 +1,16 @@
+{
+  "name": "sales-postgres-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "host.docker.internal",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "sales_pipeline",
+    "topic.prefix": "salesdb",
+    "schema.include.list": "source_sys",
+    "table.include.list": "source_sys.sales",
+    "plugin.name": "pgoutput",
+    "slot.name": "debezium_slot"
+  }
+}
